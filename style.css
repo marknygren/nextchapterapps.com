@@ -269,7 +269,8 @@ a.arrow:hover::after {
    ------------------------------------------------------------- */
 
 .masthead {
-  padding: var(--space-3) 0 var(--space-3);
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
   border-bottom: 1px solid var(--color-rule);
   background: var(--color-bg);
 }
@@ -348,7 +349,8 @@ a.arrow:hover::after {
    ------------------------------------------------------------- */
 
 .hero {
-  padding: var(--space-12) 0 var(--space-8);
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-8);
 }
 
 .hero__title {
@@ -414,7 +416,8 @@ a.arrow:hover::after {
    ------------------------------------------------------------- */
 
 .apps {
-  padding: var(--space-6) 0 var(--space-10);
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-10);
 }
 
 .app-card {
@@ -507,7 +510,8 @@ a.arrow:hover::after {
    ------------------------------------------------------------- */
 
 .beliefs {
-  padding: var(--space-6) 0 var(--space-12);
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-12);
 }
 
 .belief-list {
@@ -566,7 +570,8 @@ a.arrow:hover::after {
    ------------------------------------------------------------- */
 
 .doc {
-  padding: var(--space-10) 0 var(--space-12);
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-12);
   max-width: var(--narrow);
   margin: 0 auto;
 }
@@ -699,7 +704,8 @@ a.arrow:hover::after {
 
 .site-footer {
   border-top: 1px solid var(--color-rule);
-  padding: var(--space-5) 0 var(--space-6);
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-6);
   margin-top: auto;
   background: var(--color-bg);
 }
@@ -813,7 +819,8 @@ a.arrow:hover::after {
   }
 
   .hero {
-    padding: var(--space-8) 0 var(--space-6);
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-6);
   }
 
   .site-footer__inner {
