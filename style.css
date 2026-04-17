@@ -680,6 +680,59 @@ a.arrow:hover::after {
   font-weight: 400;
 }
 
+/* Tables (used in app-specific legal pages) */
+.table-wrap {
+  margin: var(--space-3) 0 var(--space-4);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid var(--color-fg);
+  border-bottom: 1px solid var(--color-fg);
+}
+
+.doc__body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  margin: 0;
+  table-layout: auto;
+  min-width: 28rem;
+}
+
+.doc__body table thead th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-brand);
+  text-align: left;
+  padding: var(--space-2);
+  vertical-align: bottom;
+  border-bottom: 1px solid var(--color-rule-strong);
+}
+
+.doc__body table tbody td {
+  padding: var(--space-2);
+  border-bottom: 1px solid var(--color-rule);
+  vertical-align: top;
+  color: var(--color-fg-soft);
+  line-height: 1.55;
+}
+
+.doc__body table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.doc__body table tbody td:first-child {
+  font-weight: 600;
+  color: var(--color-fg);
+  white-space: normal;
+}
+
+.doc__body table a {
+  word-break: break-word;
+}
+
 /* Callout (contact, highlights) */
 .callout {
   background: var(--color-bg-sunk);
