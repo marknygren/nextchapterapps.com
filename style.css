@@ -1174,25 +1174,22 @@ a.arrow:hover::after {
 
 .rr-phone__notch {
   position: absolute;
-  top: 14px;
+  top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  width: 112px;
-  height: 30px;
+  width: 84px;
+  height: 24px;
   background: #000;
   border-radius: 999px;
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.06),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
   z-index: 3;
   display: block;
   pointer-events: none;
 }
 
 .rr-phone--sm .rr-phone__notch {
-  top: 11px;
-  width: 82px;
-  height: 22px;
+  top: 12px;
+  width: 58px;
+  height: 17px;
 }
 
 .rr-phone__screen {
