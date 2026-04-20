@@ -1209,98 +1209,34 @@ a.arrow:hover::after {
   border-radius: 24px;
 }
 
-/*
-  Placeholder screen rendering — shown until the real screenshot PNG is dropped
-  into /realready/images/. Each .rr-phone__screen--* has its own visual hint
-  (progress ring, state picker, practice, etc.) built from pure CSS so the page
-  never looks empty while we wait on assets.
-*/
-
-.rr-phone__screen::before,
-.rr-phone__screen::after {
-  content: "";
+/* Real screenshot — sits on top of any fallback pseudo-elements */
+.rr-phone__screen img {
   position: absolute;
-  pointer-events: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  z-index: 2;
+  border-radius: inherit;
 }
 
-/* Top "status + app header" band — shared across placeholders */
+/*
+  Minimal fallback — shown only if a screenshot fails to load. Pseudo-elements
+  sit beneath the <img>, so they're invisible on normal load. Kept so the page
+  still looks intentional if an image 404s.
+*/
+
 .rr-phone__screen::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 26%;
-  background:
-    linear-gradient(180deg, var(--rr-navy) 0%, var(--rr-navy-deep) 100%);
-}
-
-/* Hero home screen — large progress ring (orange arc) */
-.rr-phone__screen--hero::after {
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 56%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  border: 9px solid rgba(142, 202, 230, 0.35);
-  border-top-color: var(--rr-orange);
-  border-right-color: var(--rr-orange);
-  box-shadow: 0 10px 24px -12px rgba(2, 48, 71, 0.25);
-}
-
-/* Reusable category-card stripe for small placeholders */
-.rr-phone__screen--step-state,
-.rr-phone__screen--step-practice,
-.rr-phone__screen--step-progress {
-  background-image: none;
-}
-
-.rr-phone__screen--step-state::after {
-  left: 8%;
-  right: 8%;
-  top: 34%;
-  height: 56%;
-  background:
-    repeating-linear-gradient(
-      180deg,
-      var(--rr-surface) 0,
-      var(--rr-surface) 28px,
-      transparent 28px,
-      transparent 36px
-    );
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(2, 48, 71, 0.08);
-}
-
-.rr-phone__screen--step-practice::after {
-  left: 8%;
-  right: 8%;
-  top: 34%;
-  height: 56%;
-  background:
-    linear-gradient(180deg, var(--rr-surface) 0%, var(--rr-surface) 34%, var(--rr-bg-cool) 34%, var(--rr-bg-cool) 100%);
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(2, 48, 71, 0.08);
-}
-
-.rr-phone__screen--step-progress::after {
-  left: 18%;
-  right: 18%;
-  top: 34%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  border: 8px solid rgba(142, 202, 230, 0.35);
-  border-top-color: var(--rr-green);
-  border-right-color: var(--rr-green);
-  border-bottom-color: var(--rr-green);
-}
-
-/* When the real screenshot ships, apply it to .rr-phone__screen--*. */
-.rr-phone__screen--hero.has-shot {
-  background-image: url("/realready/images/hero-home.png");
-}
-.rr-phone__screen--hero.has-shot::before,
-.rr-phone__screen--hero.has-shot::after {
-  display: none;
+  background: linear-gradient(180deg, var(--rr-navy) 0%, var(--rr-navy-deep) 100%);
+  pointer-events: none;
 }
 
 /* ----- Sections ----- */
