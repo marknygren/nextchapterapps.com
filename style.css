@@ -1177,19 +1177,22 @@ a.arrow:hover::after {
   top: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: 96px;
-  height: 22px;
-  background: #0a0a0a;
+  width: 112px;
+  height: 30px;
+  background: #000;
   border-radius: 999px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
   z-index: 3;
   display: block;
   pointer-events: none;
 }
 
 .rr-phone--sm .rr-phone__notch {
-  top: 12px;
-  width: 68px;
-  height: 17px;
+  top: 11px;
+  width: 82px;
+  height: 22px;
 }
 
 .rr-phone__screen {
@@ -1421,7 +1424,8 @@ a.arrow:hover::after {
   color: #ffffff;
   margin: 0 0 var(--space-3);
   max-width: none;
-  min-height: 1.2em;
+  line-height: 1.2;
+  min-height: 2.4em;
 }
 
 .rr-step__device {
