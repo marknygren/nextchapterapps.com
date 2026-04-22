@@ -1090,7 +1090,7 @@ a.arrow:hover::after {
   letter-spacing: -0.035em;
   margin: 0 0 var(--space-3);
   color: #ffffff;
-  max-width: 14ch;
+  max-width: 22ch;
 }
 
 .rr-hero__title em {
